@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+    <div id="appLayout"></div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/session.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/layout.js"></script>
+
+    <script>
+
+        if (Session.requireRole("USER")) {
+
+            renderLayout();
+
+            document
+                .getElementById("pageContent")
+                .innerHTML = `
+
+                <h2 class="fw-bold">
+                    User Dashboard
+                </h2>
+
+                <p class="text-muted">
+                    Welcome to your dashboard.
+                </p>
+
+                <div class="card shadow-sm border-0 mt-4">
+
+                    <div class="card-body">
+
+                        <h5>
+                            Welcome
+                        </h5>
+
+                        <p>
+                            You are logged in successfully.
+                        </p>
+
+                    </div>
+
+                </div>
+            `;
+        }
+
+    </script>
+
+</body>
+
+</html>
