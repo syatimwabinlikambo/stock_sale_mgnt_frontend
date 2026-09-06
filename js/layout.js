@@ -428,6 +428,43 @@ function renderLayout() {
                             </a>
 
                             <a
+                                href="sales.html"
+                                class="sidebar-link">
+
+                                <span class="sidebar-icon">
+
+                                <i class="bi bi-cart-plus"></i>
+
+                                </span>
+
+                                <span>
+                                    Sales
+                                </span>
+
+                            </a>
+
+                            <a 
+                                href="manage_sales.html"
+                                class="sidebar-link">
+                                <span class="sidebar-icon">
+                                    <i class="bi bi-receipt"></i>
+                                </span>
+                                <span>Manage Sales</span>
+                            </a>
+
+                            <a href="payments_views.html" class="sidebar-link">
+
+                                <span class="sidebar-icon">
+                                    <i class="bi bi-credit-card"></i>
+                                </span>
+
+                                <span>
+                                    Payments
+                                </span>
+
+                            </a>
+
+                            <a
                                 href="#"
                                 class="sidebar-link">
 
@@ -555,8 +592,8 @@ function renderLayout() {
                         }
 
                         `
-                    : ""
-                    }
+            : ""
+        }
 
                     <!-- =========================================
                          USER MENU
