@@ -363,7 +363,13 @@ function roleBadge(role) {
                     MANAGER
                 </span>
             `;
+        case "CASHIER":
 
+            return `
+                <span class="badge bg-info text-dark">
+                    CASHIER
+                </span>
+            `;
         default:
 
             return `

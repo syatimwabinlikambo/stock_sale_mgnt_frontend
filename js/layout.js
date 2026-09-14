@@ -408,6 +408,35 @@ function renderLayout() {
                                     Stock
                                 </span>
 
+                            </a> 
+                            
+                            <a
+                                href="low_stock.html"
+                                class="sidebar-link">
+
+                                <span class="sidebar-icon">
+                                    <i class="bi bi-exclamation-triangle"></i>
+                                </span>
+
+                                <span>
+                                    Low Stock
+                                </span>
+
+                            </a>
+
+
+                            <a
+                                href="requisitions.html"
+                                class="sidebar-link">
+
+                                <span class="sidebar-icon">
+                                    <i class="bi bi-file-earmark-text"></i>
+                                </span>
+
+                                <span>
+                                    Requisitions
+                                </span>
+
                             </a>
                             <a
                                 href="customers.html"
@@ -464,6 +493,16 @@ function renderLayout() {
 
                             </a>
 
+                            <a href="admin_money.html" class="sidebar-link">
+
+                                <span class="sidebar-icon">
+                                    <i class="bi bi-shield-check"></i>
+                                </span>
+
+                                <span>Money Approval</span>
+
+                            </a>
+
                             <a
                                 href="#"
                                 class="sidebar-link">
@@ -486,16 +525,129 @@ function renderLayout() {
             : ""
         }
 
+                        <!-- =========================================
+                        MANAGER MENU
+                        ========================================= -->
+
+                        ${role === "MANAGER"
+            ? `
+                        <div
+                        class="sidebar-section-title">
+
+                            Management
+
+                        </div>
+
+                        <a
+                        href="products.html"
+                        class="sidebar-link">
+
+                        <span class="sidebar-icon">
+
+                            <img
+                                src="../assets/icons/icons8-open-box-50.png"
+                                alt="Products">
+
+                        </span>
+
+                        <span>
+                            Products
+                        </span>
+
+                        </a>
+
+                        <a
+                        href="stock.html"
+                        class="sidebar-link">
+
+                        <span class="sidebar-icon">
+
+                            <img
+                                src="../assets/icons/icons8-stock-100.png"
+                                alt="Stock">
+
+                        </span>
+
+                        <span>
+                            Stock
+                        </span>
+
+                        </a>
+
+                        <a
+                        href="low_stock.html"
+                        class="sidebar-link">
+
+                        <span class="sidebar-icon">
+
+                            <i class="bi bi-exclamation-triangle"></i>
+
+                        </span>
+
+                        <span>
+                            Low Stock
+                        </span>
+
+                        </a>
+
+
+                        <a
+                        href="requisitions.html"
+                        class="sidebar-link">
+
+                        <span class="sidebar-icon">
+                            <i class="bi bi-file-earmark-text"></i>
+                        </span>
+
+                        <span>
+                            Requisitions
+                        </span>
+
+                        </a>
+                        <a
+                        href="customers.html"
+                        class="sidebar-link">
+
+                        <span class="sidebar-icon">
+
+                                <img
+                                src="../assets/icons/icons8-customers-100.png"
+                                alt="Customers">
+
+                        </span>
+
+                        <span>
+                            Customers
+                        </span>
+
+                        </a>
+
+                        <a href="money_tracing.html" class="sidebar-link">
+
+                        <span class="sidebar-icon">
+                            <i class="bi bi-cash-stack"></i>
+                        </span>
+
+                        <span>Money Tracing</span>
+
+                        </a>
+
+
+
+                        `
+            : ""
+        }
+
                     <!-- =========================================
-                         MANAGER MENU
+                         CASHIER MENU
                          ========================================= -->
 
-                    ${role === "MANAGER"
+                    ${role === "CASHIER"
             ? `
                             <div
                                 class="sidebar-section-title">
 
-                                Management
+                                Application
 
                             </div>
 
@@ -507,93 +659,30 @@ function renderLayout() {
                                 <span
                                     class="sidebar-icon">
 
-                                    📦
+                                    📄
 
                                 </span>
 
                                 <span>
-                                    Operations
+                                    My Activities
                                 </span>
 
                             </a>
-
-                            <a
-                                href="#"
-                                class="sidebar-link">
-
-                                <span
-                                    class="sidebar-icon">
-
-                                    📊
-
-                                </span>
-
-                                <span>
-                                    Reports
-                                </span>
-
-                            </a>
-
-                            <a
-                                href="products.html"
-                                class="sidebar-link">
+                            <a href="cashier_money.html" class="sidebar-link">
 
                                 <span class="sidebar-icon">
-
-                                    <img
-                                        src="../assets/icons/icons8-open-box-50.png"
-                                        alt="Products">
-
+                                    <i class="bi bi-cash-coin"></i>
                                 </span>
 
-                                <span>
-                                    Products
-                                </span>
+                                <span>Cash Verification</span>
 
                             </a>
-
-                            <a
-                                href="stock.html"
-                                class="sidebar-link">
-
-                                <span class="sidebar-icon">
-
-                                    <img
-                                        src="../assets/icons/icons8-stock-100.png"
-                                        alt="Stock">
-
-                                </span>
-
-                                <span>
-                                    Stock
-                                </span>
-
-                            </a>
-                            <a
-                                href="customers.html"
-                                class="sidebar-link">
-
-                                <span class="sidebar-icon">
-
-                                      <img
-                                        src="../assets/icons/icons8-customers-100.png"
-                                        alt="Customers">
-
-                                </span>
-
-                                <span>
-                                    Customers
-                                </span>
-
-                            </a>
-
-                            {
-
-                        }
 
                         `
             : ""
         }
+
+
 
                     <!-- =========================================
                          USER MENU

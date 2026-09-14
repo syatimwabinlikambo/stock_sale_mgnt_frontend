@@ -82,6 +82,12 @@ const Session = {
                     "pages/user-dashboard.html";
 
                 break;
+            case "CASHIER":
+
+                window.location.href =
+                    "pages/cashier_money.html";
+
+                break;
 
             default:
 
