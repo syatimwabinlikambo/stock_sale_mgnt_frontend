@@ -1,6 +1,6 @@
 const API = {
 
-    baseUrl: "http://localhost:8080/api",
+    baseUrl: "https://stock-sale-mgnt-backend.onrender.com/api",
 
 
     // ============================================================
